@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
 import { loginRoute } from '../utils/APIRoutes';
 
-
 function Login() {
   const navigate = useNavigate();
   const toastOptions= {
@@ -35,11 +34,11 @@ function Login() {
     return true;
   };
 
-  // useEffect(() => {
-  //   if(localStorage.getItem("chat-app-user")) {
-  //     navigate('/')
-  //   }
-  // }, [])
+  useEffect(() => {
+    if(localStorage.getItem("chat-app-user")) {
+      navigate('/')
+    }
+  }, [])
 
   const handleSubmit = async (event) => {
     event.preventDefault();
