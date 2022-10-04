@@ -49,7 +49,12 @@ export default function SetAvatar() {
     }
   };
 
-  
+  useEffect(() => {
+    if(localStorage.getItem("chat-app-user")) {
+      navigate('/login')
+    }
+  }, [])
+
   useEffect( () => {
     const fetchData = async() => {
 

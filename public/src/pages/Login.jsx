@@ -35,9 +35,13 @@ function Login() {
   };
 
   useEffect(() => {
-    if(localStorage.getItem("chat-app-user")) {
-      navigate('/')
+    const fetchData = async() => {
+      if(localStorage.getItem("chat-app-user")) {
+        navigate('/')
     }
+    
+  }
+  fetchData();
   }, [])
 
   const handleSubmit = async (event) => {
