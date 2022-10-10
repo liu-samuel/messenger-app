@@ -60,8 +60,7 @@ export default function ChatContainer({ currentChat, currentUser }) {
                             </div>
                         </div>
                     )
-                })
-            }
+                })}
         </div>
         <ChatInput handleSendMsg={handleSendMsg}/>
     </Container>
