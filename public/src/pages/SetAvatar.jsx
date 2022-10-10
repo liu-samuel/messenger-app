@@ -50,15 +50,15 @@ export default function SetAvatar() {
   };
 
   useEffect(() => {
-    if(localStorage.getItem("chat-app-user")) {
+    const fetchData = async() => {
+      if(!localStorage.getItem("chat-app-user")) {
       navigate('/login')
-    }
+    }}
+    fetchData();
   }, [])
 
   useEffect( () => {
     const fetchData = async() => {
-
-    
     const data = [];
     for (let i=0; i<4; i++) {
         const image = await axios.get(`${api}/${Math.round(Math.random()*1000)}`);
